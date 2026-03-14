@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Terminal, Moon, Sun } from 'lucide-react';
+import { Terminal, Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 

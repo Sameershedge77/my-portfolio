@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code } from 'lucide-react';
-import React from 'react';
+
 
 type Project = {
     title: string;

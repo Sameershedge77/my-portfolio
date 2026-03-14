@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Clock, User, FileText, Github, Linkedin, Terminal, MoveRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import { Mail, MapPin, Clock, User, FileText, Github, Linkedin, Terminal } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Hero = ({ onOpenTerminal }: { onOpenTerminal: () => void }) => {
     const [time, setTime] = useState<string>('');
