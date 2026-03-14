@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --color-neon-green: var(--theme-neon-green, #00ffba);
+  --color-dark-bg: var(--theme-bg, #0a0a0a);
+  --color-dark-card: var(--theme-card, #141414);
+  --color-dark-border: var(--theme-border, #222222);
+  --color-text-primary: var(--theme-text, #e5e5e5);
+  --color-text-secondary: var(--theme-text-sec, #a3a3a3);
+  --color-text-muted: var(--theme-text-mut, #525252);
+}
+
+:root {
+  --theme-neon-green: #00aa77;
+  --theme-bg: #f8fafc;
+  --theme-card: #ffffff;
+  --theme-border: #e2e8f0;
+  --theme-text: #0f172a;
+  --theme-text-sec: #475569;
+  --theme-text-mut: #94a3b8;
+}
+
+:root.dark, .dark {
+  --theme-neon-green: #00ffba;
+  --theme-bg: #0a0a0a;
+  --theme-card: #141414;
+  --theme-border: #222222;
+  --theme-text: #e5e5e5;
+  --theme-text-sec: #a3a3a3;
+  --theme-text-mut: #525252;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-text-primary font-sans antialiased selection:bg-neon-green/30 selection:text-neon-green;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-dark-card/50 backdrop-blur-md border border-dark-border rounded-xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-text-secondary;
+  }
+}
